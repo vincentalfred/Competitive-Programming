@@ -29,8 +29,8 @@ int dfs(int u, int pre) {
 	}
 	
 	height[u] = maksheight+1;
-	diameter = maksheight;
-	if (maksheight2 > -1) diameter += maksheight2 + 2;
+	diameter = height[u];
+	if (maksheight2 > -1) diameter += maksheight2 + 1;
 	
 	maksdiameter = max(maksdiameter, diameter);
 	
@@ -68,4 +68,7 @@ int main() {
 2 5
 5 6
 3 4
+
+2
+1 2
 */
